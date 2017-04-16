@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'docker-hubot'
+    }
+    
+  }
   stages {
     stage('Initialize') {
       steps {
